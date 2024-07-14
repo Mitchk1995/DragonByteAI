@@ -25,9 +25,9 @@
 - [ ] Set up background job processing (Celery)
   - [ ] Define job queues and priorities
   - [ ] Implement job monitoring and error handling
-- [ ] Implement WebSocket for real-time updates
-  - [ ] Design WebSocket protocol for game events
-  - [ ] Implement connection management and error handling
+- [x] Implement WebSocket for real-time updates
+  - [x] Design WebSocket protocol for game events
+  - [x] Implement connection management and error handling
 
 ## 3. AI and NLP Integration
 - [x] Develop LLM integration service
