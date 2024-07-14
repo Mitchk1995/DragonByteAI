@@ -25,9 +25,12 @@
 - [ ] Set up background job processing (Celery)
   - [ ] Define job queues and priorities
   - [ ] Implement job monitoring and error handling
-- [x] Implement WebSocket for real-time updates
+- [ ] Implement WebSocket for real-time updates
   - [x] Design WebSocket protocol for game events
   - [x] Implement connection management and error handling
+  - [ ] Develop message queuing system for WebSocket communications
+  - [ ] Implement WebSocket authentication and security measures
+  - [ ] Create WebSocket load balancing and scaling strategy
 
 ## 3. AI and NLP Integration
 - [x] Develop LLM integration service
@@ -42,6 +45,8 @@
   - [ ] Implement short-term and long-term memory models
   - [ ] Create context summarization for LLM prompts
   - [ ] Develop context pruning and relevance scoring
+  - [ ] Implement context persistence across game sessions
+  - [ ] Develop context sharing mechanism for multiplayer scenarios
 - [ ] Implement AI-driven game mechanics
   - [ ] Dynamic quest generation
   - [ ] Adaptive difficulty adjustment
@@ -54,6 +59,8 @@
   - [ ] Design turn-based combat mechanics
   - [ ] Implement damage calculation and status effects
   - [ ] Create AI-driven combat strategies for NPCs
+  - [ ] Develop initiative and turn order system
+  - [ ] Implement combat log and replay functionality
 - [ ] Create inventory and item management system
   - [ ] Implement item categories and attributes
   - [ ] Develop crafting and item modification system
@@ -80,6 +87,8 @@
 - [ ] Implement dynamic dialogue generation
   - [ ] Develop character-specific speech patterns
   - [ ] Create context-aware response generation
+  - [ ] Implement emotional state tracking for NPCs
+  - [ ] Develop dialogue history and callback system
 - [ ] Create character personality and relationship model
   - [ ] Implement trait-based personality system
   - [ ] Develop dynamic relationship evolution
@@ -99,6 +108,8 @@
 - [ ] Implement help and tutorial system
   - [ ] Create context-sensitive help commands
   - [ ] Develop interactive tutorial scenarios
+  - [ ] Implement progressive disclosure of game mechanics
+  - [ ] Create a searchable in-game knowledge base
 - [ ] Develop user preference and settings management
   - [ ] Implement customizable UI options
   - [ ] Create accessibility features
@@ -123,6 +134,8 @@
 - [ ] Optimize AI response time
   - [ ] Implement response pre-generation for common scenarios
   - [ ] Develop fallback mechanisms for high-latency situations
+  - [ ] Create an AI response caching system
+  - [ ] Implement parallel processing for AI tasks
 - [x] Implement server-side rate limiting and throttling
 
 ## 8. Security Measures
@@ -148,6 +161,8 @@
 - [ ] Implement AI behavior testing and validation
   - [ ] Develop test scenarios for edge cases in AI responses
   - [ ] Create consistency checks for AI-generated content
+  - [ ] Implement automated regression testing for AI behaviors
+  - [ ] Develop A/B testing framework for AI improvements
 
 ## 10. Documentation and Support
 - [ ] Create API documentation (Swagger/OpenAPI)
@@ -185,3 +200,7 @@
 - [ ] Community and Social Media Integration
   - [ ] Create sharing mechanisms for game achievements
   - [ ] Develop community-driven content creation tools
+- [ ] Voice Integration
+  - [ ] Research text-to-speech options for game narration
+  - [ ] Explore speech-to-text for voice command input
+  - [ ] Design voice-based interaction model for gameplay
