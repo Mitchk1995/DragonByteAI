@@ -3,7 +3,7 @@ from src.utils.text_ui import display_text, get_user_input
 from src.nlp.command_parser import parse_command
 from src.models.game_state import GameState
 from src.ai.llm_client import LlamaClient
-from src.ai.prompt_generator import generate_prompt
+from src.ai.prompt_generator import PromptGenerator
 from src.ai.response_parser import parse_response
 
 logging.basicConfig(level=logging.INFO)
@@ -13,6 +13,7 @@ class GameEngine:
     def __init__(self):
         self.game_state = None
         self.llm_client = LlamaClient()
+        self.prompt_generator = PromptGenerator()
 
     def start_game(self, user_id):
         self.game_state = GameState.get_game_state(user_id) or GameState(user_id, None, "starting_location", {}, {})
@@ -37,7 +38,7 @@ class GameEngine:
     def process_input(self, user_input):
         parsed_command = parse_command(user_input)
         if parsed_command:
-            prompt = generate_prompt(self.game_state, parsed_command)
+            prompt = self.prompt_generator.generate_prompt(self.game_state, parsed_command)
             llm_response = self.llm_client.generate_response(prompt)
             parsed_response = parse_response(llm_response)
             self.apply_response(parsed_response)
