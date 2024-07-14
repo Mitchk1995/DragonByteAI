@@ -40,7 +40,7 @@
   - [ ] Procedural content generation (NPCs, items, locations)
 
 ## 4. Game Engine Development
-- [ ] Implement core game loop
+- [x] Implement core game loop
 - [ ] Develop combat system
   - [ ] Turn-based combat logic
   - [ ] Damage calculation and effect application
