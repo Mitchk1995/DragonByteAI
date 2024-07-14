@@ -1,2 +1,4 @@
 .aider*
 venv
+.codebuddy/.gitignore
+.codebuddy/summary.md
