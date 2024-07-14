@@ -1,10 +1,10 @@
 import logging
 from src.utils.text_ui import display_text, get_user_input
-from src.nlp.command_parser import parse_command
+from src.utils.command_parser import parse_command
 from src.models.game_state import GameState
 from src.ai.llm_client import LlamaClient
 from src.ai.prompt_generator import PromptGenerator
-from src.ai.response_parser import parse_response
+from src.ai.response_parser import ResponseParser
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -40,7 +40,8 @@ class GameEngine:
         if parsed_command:
             prompt = self.prompt_generator.generate_prompt(self.game_state, parsed_command)
             llm_response = self.llm_client.generate_response(prompt)
-            parsed_response = parse_response(llm_response)
+            response_parser = ResponseParser()
+            parsed_response = response_parser.parse_dialogue(llm_response)  # You can change this method based on the type of response you expect
             self.apply_response(parsed_response)
         else:
             display_text("I don't understand that command.")
