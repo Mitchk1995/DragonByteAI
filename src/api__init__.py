@@ -1,7 +1,7 @@
 from flask import Blueprint
-from .users import users_bp
-from .characters import characters_bp
-from .game_states import game_states_bp
+from .models.user import users_bp
+from .models.character import characters_bp
+from .models.game_state import game_states_bp
 
 api_bp = Blueprint('api', __name__)
 
