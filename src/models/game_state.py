@@ -1,4 +1,5 @@
-from app import mongo
+from flask_pymongo import PyMongo
+from flask import current_app
 from bson import ObjectId
 
 class GameState:
@@ -12,14 +13,14 @@ class GameState:
 
     def save(self):
         if not self._id:
-            result = mongo.db.game_states.insert_one(self.to_dict())
+            result = current_app.mongo.db.game_states.insert_one(self.to_dict())
             self._id = result.inserted_id
         else:
-            mongo.db.game_states.update_one({'_id': self._id}, {'$set': self.to_dict()})
+            current_app.mongo.db.game_states.update_one({'_id': self._id}, {'$set': self.to_dict()})
 
     @staticmethod
     def get_game_state(user_id):
-        game_state_data = mongo.db.game_states.find_one({'user_id': ObjectId(user_id)})
+        game_state_data = current_app.mongo.db.game_states.find_one({'user_id': ObjectId(user_id)})
         if game_state_data:
             return GameState(
                 user_id=game_state_data['user_id'],

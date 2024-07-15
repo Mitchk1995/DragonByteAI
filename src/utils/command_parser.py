@@ -6,6 +6,22 @@ from typing import Dict, Any, Optional
 nlp = spacy.load("en_core_web_sm")
 
 def parse_command(command: str) -> Optional[Dict[str, Any]]:
+    words = command.lower().split()
+    if not words:
+        return None
+
+    action = words[0]
+    if action == "go" or action == "move":
+        if len(words) > 1:
+            return {"action": "move", "direction": words[1]}
+    elif action == "attack":
+        if len(words) > 1:
+            return {"action": "attack", "target": " ".join(words[1:])}
+    elif action == "use":
+        if len(words) > 1:
+            return {"action": "use", "item": " ".join(words[1:])}
+
+    return None
     """
     Parse the user's command using advanced NLP techniques.
     
