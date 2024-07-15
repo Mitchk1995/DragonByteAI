@@ -5,7 +5,7 @@ from models.game_state import GameState
 from ai.mock_ai_client import MockAIClient
 from ai.prompt_generator import PromptGenerator
 from ai.response_parser import ResponseParser
-from websockets.handler import WebSocketHandler
+from src.websockets.handler import WebSocketHandler
 from game.combat import CombatSystem, PlayerCombatant, NPCCombatant
 
 logging.basicConfig(level=logging.INFO)

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.game.engine import GameEngine
+from game.engine import GameEngine
 from src.models.game_state import GameState
 from websockets.handler import WebSocketHandler
 
