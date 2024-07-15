@@ -1,8 +1,8 @@
-from ..game.combat import CombatSystem, PlayerCombatant, NPCCombatant
-from ..models.user import User
-from ..models.game_state import GameState
-from ..ai.llm_client import LlamaClient
-from ..utils.command_parser import parse_command
+from game.combat import CombatSystem, PlayerCombatant, NPCCombatant
+from models.user import User
+from models.game_state import GameState
+from ai.llm_client import LlamaClient
+from utils.command_parser import parse_command
 
 class GameEngine:
     def __init__(self):

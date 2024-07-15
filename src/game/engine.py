@@ -1,12 +1,12 @@
 import logging
-from ..utils.text_ui import display_text, get_user_input
-from ..utils.command_parser import parse_command
-from ..models.game_state import GameState
-from ..ai.mock_ai_client import MockAIClient
-from ..ai.prompt_generator import PromptGenerator
-from ..ai.response_parser import ResponseParser
-from ..websockets.handler import WebSocketHandler
-from ..game.combat import CombatSystem, PlayerCombatant, NPCCombatant
+from utils.text_ui import display_text, get_user_input
+from utils.command_parser import parse_command
+from models.game_state import GameState
+from ai.mock_ai_client import MockAIClient
+from ai.prompt_generator import PromptGenerator
+from ai.response_parser import ResponseParser
+from websockets.handler import WebSocketHandler
+from game.combat import CombatSystem, PlayerCombatant, NPCCombatant
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
