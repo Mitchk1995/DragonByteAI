@@ -1,21 +1,18 @@
 import unittest
-from unittest.mock import patch, MagicMock
-from game.engine import GameEngine
+from unittest.mock import patch
+from src.game.engine import GameEngine
 from src.models.game_state import GameState
-from src.websockets.handler import WebSocketHandler
 
 class TestGameEngine(unittest.TestCase):
     @patch('src.models.game_state.GameState.get_game_state')
     @patch('src.models.game_state.GameState.save')
     @patch('src.models.game_state.GameState._collection')
-    @patch('src.websockets.handler.WebSocketHandler')
-    def setUp(self, mock_websocket_handler, mock_collection, mock_save, mock_get_game_state):
+    def setUp(self, mock_collection, mock_save, mock_get_game_state):
         GameState.set_collection(mock_collection)
         self.mock_collection = mock_collection
         self.mock_get_game_state = mock_get_game_state
         self.mock_save = mock_save
-        self.mock_websocket = mock_websocket_handler.return_value
-        self.engine = GameEngine(websocket=self.mock_websocket)
+        self.engine = GameEngine()
 
     def test_start_game(self):
         self.mock_get_game_state.return_value = None
