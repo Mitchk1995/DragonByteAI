@@ -4,7 +4,7 @@ from flask_jwt_extended import JWTManager
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from config import Config
-from api import api_bp
+from src.api.users import api_bp
 
 def create_app(config_class=Config):
     app = Flask(__name__)

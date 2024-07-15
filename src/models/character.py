@@ -1,4 +1,6 @@
-from app import mongo
+from pymongo import MongoClient
+
+mongo = MongoClient('mongodb://localhost:27017/')['dragonbyte_realms']
 from bson import ObjectId
 
 class Character:
