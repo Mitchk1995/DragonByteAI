@@ -1,16 +1,14 @@
 import logging
-from src.utils.text_ui import display_text, get_user_input
-from src.utils.command_parser import parse_command
-from src.models.game_state import GameState
-from src.ai.mock_ai_client import MockAIClient
-from src.ai.prompt_generator import PromptGenerator
-from src.ai.response_parser import ResponseParser
+from ..utils.text_ui import display_text, get_user_input
+from ..utils.command_parser import parse_command
+from ..models.game_state import GameState
+from ..ai.mock_ai_client import MockAIClient
+from ..ai.prompt_generator import PromptGenerator
+from ..ai.response_parser import ResponseParser
+from ..websockets.handler import WebSocketHandler
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-from websockets.handler import WebSocketHandler
-from ai.mock_ai_client import MockAIClient
 
 class GameEngine:
     def __init__(self, websocket: WebSocketHandler = None):
