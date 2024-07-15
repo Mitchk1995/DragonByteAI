@@ -76,3 +76,18 @@ class GameEngine:
         if self.game_state:
             return "Game loaded successfully!"
         return "No saved game found."
+import asyncio
+from websockets import WebSocketServerProtocol
+
+class WebSocketHandler:
+    def __init__(self, websocket: WebSocketServerProtocol):
+        self.websocket = websocket
+
+    async def send(self, message: str):
+        await self.websocket.send(message)
+
+    async def receive(self) -> str:
+        return await self.websocket.recv()
+
+    async def close(self):
+        await self.websocket.close()

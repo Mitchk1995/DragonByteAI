@@ -9,10 +9,14 @@ from src.ai.response_parser import ResponseParser
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+from src.websockets.handler import WebSocketHandler
+from src.ai.mock_ai_client import MockAIClient
+
 class GameEngine:
-    def __init__(self):
+    def __init__(self, websocket: WebSocketHandler = None):
         self.game_state = None
         self.llm_client = MockAIClient()
+        self.websocket = websocket
         self.prompt_generator = PromptGenerator()
 
     def start_game(self, user_id):
