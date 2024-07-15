@@ -44,3 +44,7 @@ class GameState:
             'quest_progress': self.quest_progress,
             'world_state': self.world_state
         }
+
+    @classmethod
+    def set_collection(cls, collection):
+        cls._collection = collection

@@ -6,7 +6,10 @@ from src.models.game_state import GameState
 class TestGameEngine(unittest.TestCase):
     @patch('src.models.game_state.GameState.get_game_state')
     @patch('src.models.game_state.GameState.save')
-    def setUp(self, mock_save, mock_get_game_state):
+    @patch('src.models.game_state.GameState._collection')
+    def setUp(self, mock_collection, mock_save, mock_get_game_state):
+        GameState.set_collection(mock_collection)
+        self.mock_collection = mock_collection
         self.mock_get_game_state = mock_get_game_state
         self.mock_save = mock_save
         self.engine = GameEngine()
