@@ -1,4 +1,4 @@
-# Professional AI Dungeon Master Development Checklist
+# Dragonbyte Realms Development Checklist
 
 ## 1. Project Setup and Architecture
 - [x] Define project architecture (microservices vs monolith)
@@ -32,7 +32,7 @@
   - [ ] Implement WebSocket authentication and security measures
   - [ ] Create WebSocket load balancing and scaling strategy
 
-## 3. AI and NLP Integration
+## 3. AI Dungeon Master (Franz) Development
 - [x] Develop LLM integration service
   - [x] Implement API client for Llama 3
   - [x] Develop prompt engineering system
@@ -52,6 +52,11 @@
   - [ ] Adaptive difficulty adjustment
   - [x] Procedural content generation (NPCs, items, locations)
   - [ ] AI-driven narrative branching and decision trees
+- [ ] Implement D&D 5e rule management
+  - [ ] Character creation and leveling
+  - [ ] Spell and ability management
+  - [ ] Combat rules and calculations
+  - [ ] Inventory and equipment tracking
 
 ## 4. Game Engine Development
 - [x] Implement core game loop
@@ -120,6 +125,12 @@
 - [x] Develop in-game mapping system
   - [x] Create text-based map representation
   - [x] Implement fog-of-war and exploration mechanics
+- [ ] Develop Discord integration
+  - [ ] Implement Discord bot for game interactions
+  - [ ] Create Discord-specific UI elements
+- [ ] Develop mobile app
+  - [ ] Design mobile-friendly UI
+  - [ ] Implement push notifications for game events
 
 ## 7. Performance Optimization
 - [x] Implement database query optimization
@@ -187,20 +198,30 @@
 - [x] Develop age verification system for mature content
 - [x] Implement content moderation system for user-generated content
 
-## 13. Future Considerations
-- [ ] Multiplayer and Social Features
-  - [ ] Design player-to-player interaction mechanics
-  - [ ] Develop cooperative and competitive gameplay modes
+## 13. Monetization and Community
+- [ ] Implement subscription plans
+  - [ ] Design tiered subscription model
+  - [ ] Implement payment processing system
+  - [ ] Develop feature access control based on subscription level
+- [ ] Develop in-game purchase system (if applicable)
 - [x] Analytics and Monitoring
   - [x] Implement game metrics tracking
   - [x] Develop player behavior analysis tools
-- [ ] Monetization strategy (if applicable)
-  - [ ] Design in-game purchase system
-  - [ ] Develop subscription model for premium features
 - [ ] Community and Social Media Integration
   - [ ] Create sharing mechanisms for game achievements
   - [ ] Develop community-driven content creation tools
+- [ ] Implement Discord community features
+  - [ ] Set up Discord server for community engagement
+  - [ ] Develop Discord-specific community events and interactions
+
+## 14. Future Considerations
+- [ ] Multiplayer and Social Features
+  - [ ] Design player-to-player interaction mechanics
+  - [ ] Develop cooperative and competitive gameplay modes
 - [ ] Voice Integration
   - [ ] Research text-to-speech options for game narration
   - [ ] Explore speech-to-text for voice command input
   - [ ] Design voice-based interaction model for gameplay
+- [ ] VR/AR Integration
+  - [ ] Explore virtual reality options for immersive gameplay
+  - [ ] Investigate augmented reality features for tabletop enhancement
