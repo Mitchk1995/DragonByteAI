@@ -1,17 +1,14 @@
 from flask import Flask
-from flask_pymongo import PyMongo
 from flask_jwt_extended import JWTManager
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from config import Config
-from src.api.users import api_bp
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
     # Initialize extensions
-    mongo = PyMongo(app)
     jwt = JWTManager(app)
     limiter = Limiter(
         get_remote_address,
@@ -19,7 +16,8 @@ def create_app(config_class=Config):
         default_limits=["200 per day", "50 per hour"]
     )
 
-    # Register blueprints
+    # Import and register blueprints
+    from src.api.users import api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.errorhandler(404)
