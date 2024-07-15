@@ -125,12 +125,9 @@
 - [x] Develop in-game mapping system
   - [x] Create text-based map representation
   - [x] Implement fog-of-war and exploration mechanics
-- [ ] Develop Discord integration
-  - [ ] Implement Discord bot for game interactions
-  - [ ] Create Discord-specific UI elements
-- [ ] Develop mobile app
-  - [ ] Design mobile-friendly UI
-  - [ ] Implement push notifications for game events
+- [ ] Develop responsive web design for mobile devices
+  - [ ] Implement mobile-friendly UI components
+  - [ ] Optimize performance for mobile browsers
 
 ## 7. Performance Optimization
 - [x] Implement database query optimization
@@ -207,12 +204,10 @@
 - [x] Analytics and Monitoring
   - [x] Implement game metrics tracking
   - [x] Develop player behavior analysis tools
-- [ ] Community and Social Media Integration
-  - [ ] Create sharing mechanisms for game achievements
-  - [ ] Develop community-driven content creation tools
-- [ ] Implement Discord community features
-  - [ ] Set up Discord server for community engagement
-  - [ ] Develop Discord-specific community events and interactions
+- [ ] Community Features
+  - [ ] Implement player profiles and achievements
+  - [ ] Create leaderboards and player rankings
+  - [ ] Develop a system for sharing custom campaigns and worlds
 
 ## 14. Future Considerations
 - [ ] Multiplayer and Social Features
@@ -222,6 +217,6 @@
   - [ ] Research text-to-speech options for game narration
   - [ ] Explore speech-to-text for voice command input
   - [ ] Design voice-based interaction model for gameplay
-- [ ] VR/AR Integration
-  - [ ] Explore virtual reality options for immersive gameplay
-  - [ ] Investigate augmented reality features for tabletop enhancement
+- [ ] Advanced Visualization
+  - [ ] Implement basic 2D map rendering
+  - [ ] Explore options for 3D world visualization
