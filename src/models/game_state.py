@@ -1,8 +1,11 @@
-from flask_pymongo import PyMongo
-from flask import current_app
+from pymongo import MongoClient
 from bson import ObjectId
 
 class GameState:
+    _client = MongoClient('mongodb://localhost:27017/')
+    _db = _client['dragonbyte_realms']
+    _collection = _db['game_states']
+
     def __init__(self, user_id, character_id, location, quest_progress, world_state, _id=None):
         self.user_id = user_id
         self.character_id = character_id
@@ -12,17 +15,18 @@ class GameState:
         self._id = _id
 
     def save(self):
+        data = self.to_dict()
         if not self._id:
-            result = current_app.mongo.db.game_states.insert_one(self.to_dict())
+            result = self._collection.insert_one(data)
             self._id = result.inserted_id
         else:
-            current_app.mongo.db.game_states.update_one({'_id': self._id}, {'$set': self.to_dict()})
+            self._collection.update_one({'_id': self._id}, {'$set': data})
 
-    @staticmethod
-    def get_game_state(user_id):
-        game_state_data = current_app.mongo.db.game_states.find_one({'user_id': ObjectId(user_id)})
+    @classmethod
+    def get_game_state(cls, user_id):
+        game_state_data = cls._collection.find_one({'user_id': user_id})
         if game_state_data:
-            return GameState(
+            return cls(
                 user_id=game_state_data['user_id'],
                 character_id=game_state_data['character_id'],
                 location=game_state_data['location'],

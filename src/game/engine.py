@@ -16,7 +16,10 @@ class GameEngine:
         self.prompt_generator = PromptGenerator()
 
     def start_game(self, user_id):
-        self.game_state = GameState.get_game_state(user_id) or GameState(user_id, None, "starting_location", {}, {})
+        self.game_state = GameState.get_game_state(user_id)
+        if not self.game_state:
+            self.game_state = GameState(user_id, None, "starting_location", {}, {})
+            self.game_state.save()
         self.main_game_loop()
 
     def main_game_loop(self):
