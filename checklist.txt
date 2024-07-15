@@ -161,16 +161,19 @@
 
 ## 9. Testing and Quality Assurance
 - [x] Develop initial unit test suite
-- [x] Implement integration tests for all major systems
-- [x] Create end-to-end tests for critical user journeys
-- [x] Implement load testing and stress testing
-  - [x] Develop performance benchmarks
-  - [x] Create automated performance regression testing
+  - [x] Create basic tests for game engine
+  - [ ] Implement tests for command parsing
+  - [ ] Develop tests for game state management
+- [ ] Implement integration tests for all major systems
+- [ ] Create end-to-end tests for critical user journeys
+- [ ] Implement load testing and stress testing
+  - [ ] Develop performance benchmarks
+  - [ ] Create automated performance regression testing
 - [x] Implement AI behavior testing and validation
   - [x] Develop test scenarios for edge cases in AI responses
-  - [x] Create consistency checks for AI-generated content
-  - [x] Implement automated regression testing for AI behaviors
-  - [x] Develop A/B testing framework for AI improvements
+  - [ ] Create consistency checks for AI-generated content
+  - [ ] Implement automated regression testing for AI behaviors
+  - [ ] Develop A/B testing framework for AI improvements
 
 ## 10. Documentation and Support
 - [x] Create API documentation (Swagger/OpenAPI)

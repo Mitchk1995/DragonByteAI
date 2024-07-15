@@ -2,7 +2,7 @@ import logging
 from src.utils.text_ui import display_text, get_user_input
 from src.utils.command_parser import parse_command
 from src.models.game_state import GameState
-from src.ai.llm_client import LlamaClient
+from src.ai.mock_ai_client import MockAIClient
 from src.ai.prompt_generator import PromptGenerator
 from src.ai.response_parser import ResponseParser
 
@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class GameEngine:
     def __init__(self):
         self.game_state = None
-        self.llm_client = LlamaClient()
+        self.llm_client = MockAIClient()
         self.prompt_generator = PromptGenerator()
 
     def start_game(self, user_id):
