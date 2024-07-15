@@ -1,5 +1,5 @@
 import unittest
-from utils.command_parser import parse_command
+from src.utils.command_parser import parse_command
 
 class TestCommandParser(unittest.TestCase):
     def test_move_command(self):
