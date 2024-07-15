@@ -1,5 +1,6 @@
 from pymongo import MongoClient
 from bson import ObjectId
+from .character import Character
 
 class GameState:
     _client = MongoClient('mongodb://localhost:27017/')
@@ -48,3 +49,6 @@ class GameState:
     @classmethod
     def set_collection(cls, collection):
         cls._collection = collection
+
+    def get_player_character(self):
+        return Character.get_character(self.character_id)
