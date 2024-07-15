@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch, MagicMock
 from src.game.engine import GameEngine
 from src.models.game_state import GameState
-from src.websockets.handler import WebSocketHandler
+from websockets.handler import WebSocketHandler
 
 class TestGameEngine(unittest.TestCase):
     @patch('src.models.game_state.GameState.get_game_state')
